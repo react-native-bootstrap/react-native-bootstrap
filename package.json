@@ -1,6 +1,6 @@
 {
   "name": "react-native-bootstrap",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Bootstrap components built for React Native",
   "main": "index.js",
   "scripts": {
