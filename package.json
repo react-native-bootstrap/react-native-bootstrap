@@ -1,0 +1,28 @@
+{
+  "name": "react-native-bootstrap",
+  "version": "0.0.0",
+  "description": "Bootstrap components built for React Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-native-bootstrap/react-native-bootstrap.git"
+  },
+  "keywords": [
+    "react",
+    "bootstrap",
+    "react-native",
+    "react-native-bootstrap"
+  ],
+  "author": {
+    "name": "Sanjeev Yadav",
+    "email": "sanjeevy133@protonmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-native-bootstrap/react-native-bootstrap/issues"
+  },
+  "homepage": "https://github.com/react-native-bootstrap/react-native-bootstrap#readme"
+}
