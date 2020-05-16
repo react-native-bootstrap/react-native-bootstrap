@@ -1,30 +1,41 @@
 <hr>
 <p align="center">
-  <b>Need help, if you want to contribute please mail sanjeevy133@protonmail.com or open issue</b>
+  <b>Looking for contributors</b>
 </p>
 <hr>
 
-## React-Native-Bootstrap
+<p align="center">
+  <a href="https://react-native-elements.github.io/react-native-elements/">
+    <img alt="react-native-elements" src=".github/logo/rnb.png" width="300">
+  </a>
+</p>
 
-> [Bootstrap](https://getbootstrap.com/) components built for [React Native](https://reactnative.dev/)
+<p align="center">
+  Cross Platform <a href="https://getbootstrap.com/">Bootstrap</a> components built for <a href="https://facebook.github.io/react-native/">React Native</a>
+</p>
 
-The idea behind is similar to [`react-bootstrap`](https://github.com/react-bootstrap/react-bootstrap), to write Bootstrap component for React Native. This is just the inception of the project, I haven't done anything like this, if you have knowledge and want to collaborate please help.
 
-## Insllation
+## React Native Bootstrap
 
-1. In your `package.json` add this line in `dependencies` section
+The idea behind is similar to [`react-bootstrap`](https://github.com/react-bootstrap/react-bootstrap), to write Bootstrap component for React Native. The project is still in early phases, contributions are welcome.
 
-    ```json
-    "react-native-bootstrap" : "git+https://git@github.com/react-native-bootstrap/react-native-bootstrap.git"
-    ```
+## 📦 Table of Content
 
-2. In terminal, install dependencies by running
+- [Getting Started](#getting-started)
+- [Components](#components)
+- [Demo App](#demo-app)
+
+## <a name="getting-started"></a>🚀 Getting Started
+
+1. Type below command to get install package from github
 
     ```bash
-    npm install
+    npm install https://github.com/react-native-bootstrap/react-native-bootstrap.git
     ```
 
-## Alert Component
+## <a name="components"></a>✨ Components
+
+<details><summary>Alert</summary>
 
 <div style="display:flex;" >
   <img  src=".github/screenshots/1.png" width="35%" >
@@ -44,9 +55,8 @@ import { Alert } from 'react-native-bootstrap';
   'info',
   'light',
   'dark',
-].map((variant, idx) => (
+].map(variant => (
   <Alert
-    key={idx}
     variant={variant}
     containerStyle={{ marginBottom: 8 }}
     messageStyle={{ fontSize: 16 }}
@@ -55,9 +65,18 @@ import { Alert } from 'react-native-bootstrap';
 ))
 ```
 
-## Meanwhile please use
+| Prop | Type | Description | Required | Default |
+|---|---|---|---|---|
+| variant | `primary`,<br/> `secondary`,<br/>  `success`,<br/>  `danger`,<br/>  `warning`,<br/>  `info`,<br/>  `light`,<br/>  `dark` | The Alert visual variant | ❌ | `primary` |
+| message | string | Message to be displayed in Alert | ✔️ | - |
+| containerStyle | [View style (object)](https://reactnative.dev/docs/view-style-props) | Style for the container which host the text message | ❌ | {} |
+| messageStyle | [Text style (object)](https://reactnative.dev/docs/text-style-props) | Text style for message | ❌ | {} |
 
-- [React Native Elements](https://github.com/react-native-elements/react-native-elements)
+</details>
+
+## <a name="demo-app"></a>📱 Demo App
+
+Checkout the official [React Native Bootstrap App](https://github.com/react-native-bootstrap/react-native-bootstrap-app) which uses all of the React Native Bootstrap components.
 
 ## Author
 
