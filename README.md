@@ -1,12 +1,6 @@
-<hr>
 <p align="center">
-  <b>Looking for contributors</b>
-</p>
-<hr>
-
-<p align="center">
-  <a href="https://react-native-elements.github.io/react-native-elements/">
-    <img alt="react-native-elements" src=".github/logo/rnb.png" width="300">
+  <a href="#">
+    <img alt="react-native-elements" src=".github/gif/promo.gif" width="300">
   </a>
 </p>
 
