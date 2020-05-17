@@ -1,10 +1,21 @@
-import React, { useContext } from 'react'
-import { ViewPropTypes, StyleSheet, View, Text } from 'react-native';
+import React, { useContext } from 'react';
+import {
+  ViewPropTypes,
+  TouchableOpacity,
+  StyleSheet,
+  View,
+  Text,
+  Image,
+} from 'react-native';
 import PropTypes from 'prop-types';
 import Color from 'color';
 import { ThemeContext } from '../theme';
 
 const propTypes = {
+  /**
+   * Title to be displayed in Alert
+   */
+  title: PropTypes.string,
   /**
    * Message to be displayed in Alert
    */
@@ -23,9 +34,22 @@ const propTypes = {
     'dark',
   ]),
   /**
+   * Renders a properly aligned dismiss button, as well as
+   * adding extra horizontal padding to the Alert.
+   */
+  dismissible: PropTypes.bool,
+  /**
+   * Callback fired when alert is closed.
+   */
+  onClose: PropTypes.func,
+  /**
    * Style for the container which host the text message
    */
   containerStyle: ViewPropTypes.style,
+  /**
+   * Text style for title
+   */
+  titleStyle: Text.propTypes.style,
   /**
    * Text style for message
    */
@@ -36,33 +60,90 @@ const defaultProps = {
   variant: 'primary',
   containerStyle: {},
   messageStyle: {},
-}
+  title: null,
+  dismissible: false,
+  onClose: () => {},
+};
+
+// Constants
+const BACKGROUND_FACOTR = 0.8;
+const BORDER_FACTOR = 0.72;
+const TEXT_FACTOR = 0.48;
+const WHITE_COLOR = Color('white');
+const BLACK_COLOR = Color('black');
 
 const Alert = ({
-  variant,
+  title,
   message,
+  variant,
+  dismissible,
+  onClose,
   containerStyle,
+  titleStyle,
   messageStyle,
 }) => {
   const { theme } = useContext(ThemeContext);
-  const color = Color(theme.colors[variant]);
+  const color = Color(theme.colors[variant] || theme.colors.primary);
+
+  const backgroundColor = color.mix(WHITE_COLOR, BACKGROUND_FACOTR);
+  const borderColor = color.mix(WHITE_COLOR, BORDER_FACTOR);
+  const textColor = color.mix(BLACK_COLOR, TEXT_FACTOR);
+
+  const combinedContainerStyle = [
+    styles.container(backgroundColor, borderColor, theme),
+    dismissible ? styles.row : null,
+    containerStyle,
+  ];
+
+  const combinedTitleStyle = [styles.title(textColor, theme), titleStyle];
+
+  const combinedMessageStyle = [styles.message(textColor), messageStyle];
 
   return (
-    <View style={[styles.container(color), containerStyle]}>
-      <Text style={[styles.message(color), messageStyle]}>{message}</Text>
+    <View style={combinedContainerStyle}>
+      <View style={dismissible ? styles.spread : null}>
+        {title && <Text style={combinedTitleStyle}>{title}</Text>}
+        <Text style={combinedMessageStyle}>{message}</Text>
+      </View>
+      {dismissible && (
+        <TouchableOpacity onPress={onClose}>
+          <Image
+            source={require('../assets/images/cancel.png')}
+            style={styles.image(textColor, theme)}
+          />
+        </TouchableOpacity>
+      )}
     </View>
-  )
+  );
 };
 
 const styles = StyleSheet.create({
-  container: color => ({
-    backgroundColor: color.mix(Color('white'), 0.8),
-    borderColor: color.mix(Color('white'), 0.72),
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 16,
+  row: {
+    flexDirection: 'row',
+  },
+  spread: {
+    flex: 1,
+  },
+  container: (backgroundColor, borderColor, theme) => ({
+    backgroundColor,
+    borderColor,
+    borderWidth: theme.dimensions.borderWidth,
+    borderRadius: theme.dimensions.borderRadius,
+    paddingHorizontal: theme.spacing.large,
+    paddingVertical: theme.spacing.medium,
+  }),
+  title: (color, theme) => ({
+    color,
+    fontWeight: 'bold',
+    marginBottom: theme.spacing.small,
   }),
   message: color => ({
-    color: color.mix(Color('black'), 0.48),
+    color,
+  }),
+  image: (color, theme) => ({
+    width: theme.dimensions.alertIconSize,
+    height: theme.dimensions.alertIconSize,
+    tintColor: color,
   }),
 });
 

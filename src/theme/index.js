@@ -1,8 +1,4 @@
-import colors from './colors';
+import theme from './theme';
 import ThemeProvider, { ThemeContext } from './ThemeProvider';
 
-export {
-  colors,
-  ThemeProvider,
-  ThemeContext,
-};
+export { theme, ThemeProvider, ThemeContext };

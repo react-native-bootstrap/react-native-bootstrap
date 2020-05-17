@@ -37,9 +37,14 @@ The idea behind is similar to [`react-bootstrap`](https://github.com/react-boots
 
 <details><summary>Alert</summary>
 
-<div style="display:flex;" >
-  <img  src=".github/screenshots/1.png" width="35%" >
-</div>
+Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+
+### Examples
+
+Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the eight `variant`s.
+
+<img src=".github/images/alert/android/1.png" width="360px" />
+
 
 ```jsx
 import { Alert } from 'react-native-bootstrap';
@@ -65,12 +70,55 @@ import { Alert } from 'react-native-bootstrap';
 ))
 ```
 
+### Heading
+
+Alerts can also contain heading.
+
+<img src=".github/images/alert/android/2.png" width="360px" />
+
+```jsx
+<Alert
+  title="Heading"
+  message="This is a primary alert—check it out!"
+/>
+```
+
+### Dismissing
+
+Add the `dismissible` prop to add a functioning dismiss button to the Alert.
+
+<img src=".github/images/alert/android/3.png" width="360px" />
+
+```jsx
+const [alert, showAlert] = useState(true);
+
+return (
+  {alert ? (
+    <Alert
+      dismissible
+      title="Dismissible Alert"
+      containerStyle={{ marginBottom: 8 }}
+      onClose={() => showAlert(false)}
+      message="This is a primary alert—check it out!"
+    />
+  ) : (
+    <Button title="Show Alert" onPress={() => showAlert(true)} />
+  )}
+)
+```
+
+### Props
+
 | Prop | Type | Description | Required | Default |
 |---|---|---|---|---|
-| variant | `primary`,<br/> `secondary`,<br/>  `success`,<br/>  `danger`,<br/>  `warning`,<br/>  `info`,<br/>  `light`,<br/>  `dark` | The Alert visual variant | ❌ | `primary` |
+| variant | `primary` \|<br/> `secondary` \|<br/>  `success` \|<br/>  `danger` \|<br/>  `warning` \|<br/>  `info` \|<br/>  `light` \|<br/>  `dark` | The Alert visual variant | ❌ | `primary` |
 | message | string | Message to be displayed in Alert | ✔️ | - |
+| title | string | Title to be displayed in Alert | ❌ | - |
+| dismissible | boolean | Renders a properly aligned dismiss button, as well as adding extra horizontal padding to the Alert | ❌ | false |
+| onClose | function | Callback fired when alert is closed | ❌ | - |
 | containerStyle | [View style (object)](https://reactnative.dev/docs/view-style-props) | Style for the container which host the text message | ❌ | {} |
 | messageStyle | [Text style (object)](https://reactnative.dev/docs/text-style-props) | Text style for message | ❌ | {} |
+| titleStyle | [Text style (object)](https://reactnative.dev/docs/text-style-props) | Text style for title | ❌ | {} |
 
 </details>
 
