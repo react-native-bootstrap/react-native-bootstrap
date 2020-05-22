@@ -4,7 +4,7 @@
   "description": "Bootstrap components built for React Native",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "repository": {
     "type": "git",
@@ -15,9 +15,18 @@
     "deepmerge": "^4.2.2",
     "prop-types": "^15.7.2"
   },
+  "devDependencies": {
+    "@react-native-community/eslint-config": "^1.1.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "18.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "2.5.0"
+  },
   "peerDependencies": {
-    "react": "^16.8.6",
-    "react-native": "^0.59.10"
+    "react": ">=16.8.6",
+    "react-native": ">=0.59.10"
   },
   "keywords": [
     "react",

@@ -1,0 +1,22 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [
+    "@react-native-community",
+    "airbnb",
+    "airbnb/hooks",
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": "off",
+    "no-use-before-define": "off",
+    "import/prefer-default-export": "warn",
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}
