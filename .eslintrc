@@ -7,9 +7,9 @@
     }
   },
   "extends": [
-    "@react-native-community",
     "airbnb",
     "airbnb/hooks",
+    "eslint-config-prettier",
     "eslint:recommended",
     "plugin:react/recommended"
   ],
