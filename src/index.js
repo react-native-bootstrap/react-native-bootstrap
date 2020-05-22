@@ -1,5 +1,5 @@
 import Alert from './Alert/Alert';
 
-import { colors, ThemeProvider, ThemeContext } from './theme';
+import { ThemeProvider, ThemeContext } from './theme';
 
-export { Alert, colors, ThemeProvider, ThemeContext };
+export { Alert, ThemeProvider, ThemeContext };

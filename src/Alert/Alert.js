@@ -11,6 +11,8 @@ import PropTypes from 'prop-types';
 import Color from 'color';
 import { ThemeContext } from '../theme';
 
+const CLOSE_IMG = require('../assets/images/cancel.png');
+
 const propTypes = {
   /**
    * Title to be displayed in Alert
@@ -60,6 +62,7 @@ const defaultProps = {
   variant: 'primary',
   containerStyle: {},
   messageStyle: {},
+  titleStyle: {},
   title: null,
   dismissible: false,
   onClose: () => {},
@@ -107,10 +110,7 @@ const Alert = ({
       </View>
       {dismissible && (
         <TouchableOpacity onPress={onClose}>
-          <Image
-            source={require('../assets/images/cancel.png')}
-            style={styles.image(textColor, theme)}
-          />
+          <Image source={CLOSE_IMG} style={styles.image(textColor, theme)} />
         </TouchableOpacity>
       )}
     </View>
