@@ -1,8 +1,14 @@
 {
   "name": "react-native-bootstrap",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Bootstrap components built for React Native",
   "main": "src/index.js",
+  "keywords": [
+    "react",
+    "bootstrap",
+    "react-native",
+    "react-native-bootstrap"
+  ],
   "scripts": {
     "lint": "eslint --ignore-path .gitignore .",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|jsx)\"",
@@ -10,6 +16,15 @@
     "check-format": "npm run prettier -- --list-different",
     "validate": "npm-run-all --parallel check-format lint"
   },
+  "author": {
+    "name": "Sanjeev Yadav",
+    "email": "sanjeevy133@protonmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-native-bootstrap/react-native-bootstrap/issues"
+  },
+  "homepage": "https://github.com/react-native-bootstrap/react-native-bootstrap#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/react-native-bootstrap/react-native-bootstrap.git"
@@ -37,20 +52,5 @@
   "peerDependencies": {
     "react": ">=16.4.1",
     "react-native": ">=0.56.0"
-  },
-  "keywords": [
-    "react",
-    "bootstrap",
-    "react-native",
-    "react-native-bootstrap"
-  ],
-  "author": {
-    "name": "Sanjeev Yadav",
-    "email": "sanjeevy133@protonmail.com"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/react-native-bootstrap/react-native-bootstrap/issues"
-  },
-  "homepage": "https://github.com/react-native-bootstrap/react-native-bootstrap#readme"
+  }
 }

@@ -24,7 +24,9 @@ The idea behind is similar to [`react-bootstrap`](https://github.com/react-boots
 1. Type below command to get install package from github
 
     ```bash
-    npm install https://github.com/react-native-bootstrap/react-native-bootstrap.git
+    yarn add react-native-bootstrap
+    # or with npm
+    npm install react-native-bootstrap
     ```
 
 ## <a name="components"></a>✨ Components
