@@ -18,5 +18,8 @@
     "no-use-before-define": "off",
     "import/prefer-default-export": "warn",
     "react-hooks/exhaustive-deps": "warn"
+  },
+  "env": {
+    "jest": true
   }
 }

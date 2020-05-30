@@ -103,7 +103,7 @@ const Alert = ({
   const combinedMessageStyle = [styles.message(textColor), messageStyle];
 
   return (
-    <View style={combinedContainerStyle}>
+    <View accessible accessibilityRole="alert" style={combinedContainerStyle}>
       <View style={dismissible ? styles.spread : null}>
         {title && <Text style={combinedTitleStyle}>{title}</Text>}
         <Text style={combinedMessageStyle}>{message}</Text>

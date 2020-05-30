@@ -10,11 +10,12 @@
     "react-native-bootstrap"
   ],
   "scripts": {
+    "test": "jest",
     "lint": "eslint --ignore-path .gitignore .",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|jsx)\"",
     "format": "npm run prettier -- --write",
     "check-format": "npm run prettier -- --list-different",
-    "validate": "npm-run-all --parallel check-format lint"
+    "validate": "npm-run-all --parallel check-format lint test"
   },
   "author": {
     "name": "Sanjeev Yadav",
@@ -35,6 +36,7 @@
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
+    "@testing-library/jest-native": "^3.1.0",
     "eslint": "6.8.0",
     "eslint-config-airbnb": "18.1.0",
     "eslint-config-prettier": "^6.11.0",
@@ -43,11 +45,14 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "2.5.0",
     "husky": "^4.2.5",
+    "jest": "^26.0.1",
     "lint-staged": "^10.2.6",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "react": "16.11.0",
-    "react-native": "0.62.2"
+    "react-native": "0.62.2",
+    "react-native-testing-library": "^2.0.0",
+    "react-test-renderer": "^16.13.1"
   },
   "peerDependencies": {
     "react": ">=16.4.1",
