@@ -11,8 +11,8 @@
   ],
   "scripts": {
     "test": "jest",
-    "lint": "eslint --ignore-path .gitignore .",
-    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|jsx)\"",
+    "lint": "eslint --ignore-path .eslintignore .",
+    "prettier": "prettier --ignore-path .eslintignore \"**/*.+(js|json|jsx)\"",
     "format": "npm run prettier -- --write",
     "check-format": "npm run prettier -- --list-different",
     "validate": "npm-run-all --parallel check-format lint test"
