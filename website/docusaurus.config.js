@@ -1,7 +1,7 @@
 module.exports = {
   title: 'React Native Bootstrap',
   tagline: 'Bootstrap components built for React Native',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://react-native-bootstrap.github.io',
   baseUrl: '/',
   favicon: 'img/rnb.png',
   organizationName: 'react-native-bootstrap', // Usually your GitHub org/user name.
@@ -80,8 +80,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+          editUrl: '${repoUrl}/tree/master/website/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
