@@ -126,9 +126,9 @@ Checkout the official [React Native Bootstrap App](https://github.com/react-nati
 
 Sanjeev Yadav
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/alexakasanjeev.svg?style=social)](https://twitter.com/alexakasanjeev)
+[![Twitter Follow](https://img.shields.io/twitter/follow/sanjeevyadavIT.svg?style=social)](https://twitter.com/sanjeevyadavIT)
 
-[![GitHub Follow](https://img.shields.io/github/followers/alexakasanjeev.svg?style=social&label=Follow)](https://github.com/alexakasanjeev)
+[![GitHub Follow](https://img.shields.io/github/followers/sanjeevyadavIT.svg?style=social&label=Follow)](https://github.com/sanjeevyadavIT)
 
 ## 🛡 License
 
